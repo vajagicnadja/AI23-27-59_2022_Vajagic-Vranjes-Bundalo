@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <!-- Nađa Vajagić AI 23/2022 -->
+       <!-- Milana Vranješ AI 27/2022 -->
+       <!-- Vanja Bundalo AI 59/2022 -->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Recenzije • Energy space</title>
+    <link rel="icon" href="logos/logo_icon_32.png">
+
+    <!-- Montserrat font--> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bebas+Neue&family=Jura:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Open+Sans&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap--> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="navAnimacija" class="navigacija container-fluid d-flex justify-content-between fixed-top">
+
+        <a href="index.html" class="navLogoContainer d-flex">
+            <div class="logoPolovina"></div>
+        </a>
+
+        <div class="navPagesContainer d-flex justify-content-evenly">
+    <div class="navButtonContainer">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="bi bi-house-fill"></i> Početna</a>
+        </li>
+            </div>
+            <div class="navButtonContainer">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"><i class="bi bi-people-fill"></i> O nama</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="treneri.html">Treneri</a></li>
+                        <li><a class="dropdown-item" href="cenovnik.html">Cenovnik</a></li>
+                        <li><a class="dropdown-item" href="plan treninga.html">Plan treninga</a></li>
+                        <li><a class="dropdown-item" href="recenzije.html">Recenzije</a></li>
+                    </ul>
+                </li>
+            </div>
+            <div class="navButtonContainer">
+                <li class="nav-item">
+                    <a class="nav-link" href="lokacija.html"><i class="bi bi-geo-alt-fill"></i>Lokacija</a>
+                </li>
+            </div>
+            <div class="navButtonContainer">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"><i class="bi bi-image"></i> Galerija</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="oprema.html"> Oprema </a></li>
+                        <li><a class="dropdown-item" href="teretana.html"> Teretana </a></li>
+                        <li><a class="dropdown-item" href="prodavnica.html"> Merch </a></li>
+                    </ul>
+                </li>
+            </div>
+            <div class="navButtonContainer">
+                <li class="nav-item">
+                   <a class="nav-link" href="kontakt.html"><i class="bi bi-telephone-fill"></i> Kontakt</a>
+               </li>
+           </div>
+       </div>
+   </div>
+
+
+   <!-- gotov navigacioni bar -->
+   
+
+   <!-- Sadrzaj-->
+
+   <section id="recenzije" class="section02 py-5" style="background-color:#C0BE9F; text-align:center;">
+  <div class="container">
+
+    <h2 class="mb-5 display-5">Šta naši klijenti kažu</h2>
+
+    <!-- UVODNI TEKST -->
+    <p class="recenzije-uvod" style="max-width: 900px; margin:auto; margin-bottom:40px; text-align:justify; color:#333;">
+      U Energy Space verujemo da kvalitet treninga nije samo u vežbama koje radite, već i u podršci koju dobijate i motivaciji koju osećate. Naši članovi redovno beleže napredak i dele svoja iskustva sa zajednicom. Bilo da ste početnik, srednje napredni ili iskusni vežbač, naši planovi treninga i personalni pristup pomažu svima da postignu svoje ciljeve.
+    </p>
+
+    <!-- Bootstrap Carousel -->
+    <div id="recenzijeCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-md-4 mb-4">
+              <div class="kartica recenzija-kartica p-4">
+                <h3>Milica J.</h3>
+                <p class="zvezdice">⭐⭐⭐⭐⭐</p>
+                <p>Početni plan mi je pomogao da pravilno usvojim tehniku vežbi i postepeno povećam kondiciju. Treneri su uvek dostupni za pitanja i motivišu da idem dalje. Preporučujem svima!</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="kartica recenzija-kartica p-4">
+                <h3>Marko T.</h3>
+                <p class="zvezdice">⭐⭐⭐⭐⭐</p>
+                <p>Srednji plan mi je doneo značajan napredak u snazi i izdržljivosti. Treninzi su raznovrsni, nikad dosadni, a atmosfera u teretani je odlična.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-4 mb-4">
+              <div class="kartica recenzija-kartica p-4">
+                <h3>Jovana P.</h3>
+                <p class="zvezdice">⭐⭐⭐⭐⭐</p>
+                <p>Napredni plan mi je potpuno promenio pristup treningu. Osećam se motivisano i fokusirano, a rezultati su vidljivi i na telu i na energiji. Hvala timu Energy Space!</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="kartica recenzija-kartica p-4">
+                <h3>Luka S.</h3>
+                <p class="zvezdice">⭐⭐⭐⭐⭐</p>
+                <p>All-in plan je najbolja investicija u moje zdravlje i kondiciju. Treneri su stručno i strpljivo pristupili svakoj vežbi, a dodatne konsultacije su neprocenjive.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-4 mb-4">
+              <div class="kartica recenzija-kartica p-4">
+                <h3>Sanja K.</h3>
+                <p class="zvezdice">⭐⭐⭐⭐⭐</p>
+                <p>Početak je bio težak, ali tim Energy Space je učinio da se osećam sigurno i motivisano. Rezultati su vidljivi već posle par nedelja. Trening ovde je pravi užitak.</p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="kartica recenzija-kartica p-4">
+                <h3>Nemanja D.</h3>
+                <p class="zvezdice">⭐⭐⭐⭐⭐</p>
+                <p>Preporučujem svima koji žele strukturiran plan i personalni pristup. Treninzi su izazovni, ali prilagođeni svakom članu, što daje odlične rezultate.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#recenzijeCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Prethodna</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#recenzijeCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Sledeća</span>
+      </button>
+
+    </div>
+
+    <!-- Poziv na akciju -->
+    <p style="max-width: 900px; margin:auto; margin-top:40px; color:#333; text-align:center;">
+      Želite i vi da budete deo naše uspešne zajednice i da vidite stvarne rezultate? Pridružite se Energy Space i krenite na svoj put ka boljoj formi i energiji!
+    </p>
+    <a href="kontakt.html" class="btn btn-warning mt-3">Rezerviši svoj trening</a>
+
+  </div>
+</section>
+
+
+   <!-- Footer -->
+<section class="container-fluid p-5" id="footer">
+
+  <div class="row">
+
+    <div class="col-md-4">
+      <h5 class="p-4 pb-2">Top Management:</h5>
+      <p class="p-5 pt-0 pb-0 m-0">CEO: Milana Vranješ AI 27/2022:</p>
+      <a class="text-decoration-none p-5 pt-0" href="mailto:milanavranjes45@gmail.com">
+        <font class="footer-markiran"><i class="bi bi-envelope-fill"></i></font> milanavranjes45@gmail.com
+    </a>
+    <p class="p-5 pt-2 pb-0 m-0">CEO: Vanja Bundalo AI 59/2022:</p>
+    <a class="text-decoration-none p-5 pt-0" href="mailto:vanja.bundalo@gmail.com">
+        <font class="footer-markiran"><i class="bi bi-envelope-fill"></i></font> vanja.bundalo@gmail.com
+    </a>
+    <p class="p-5 pt-2 pb-0 m-0">CFO: Nađa Vajagić AI 23/2022:</p>
+    <a class="text-decoration-none p-5 pt-0" href="mailto:vajagicnadja@gmail.com">
+        <font class="footer-markiran"><i class="bi bi-envelope-fill"></i></font> vajagicnadja@gmail.com
+    </a>
+</div>
+
+<div class="col-md-4 text-center">
+    <img src="logos/allrightsbelongtotheirrespectiveowners.png" alt="Energy Space logo" class="img-fluid" style="max-width: 200px;">
+</div>
+
+<div class="col-md-4 text-end">
+   <p class="p-4 pt-4 pb-2">
+    Web stranica <span class="footer-markiran">Energy Space</span> kreirana je sa ciljem da inspiriše pokret,
+    snagu i zdrav način života. Predstavlja moderan prostor posvećen treninzima, motivaciji i zajednici ljudi
+    koji veruju da granice postoje samo da bi se pomerale.
+</p>
+
+<div class="d-flex justify-content-end align-items-center gap-3 pe-5">
+   <img src="logos/LogoWheyProtein.png" alt="Sponzor 1" class="img-fluid" style="max-width: 140px;">
+   <img src="logos/fitwear.png" alt="Sponzor 2" class="img-fluid" style="max-width: 160px;">
+</div>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>

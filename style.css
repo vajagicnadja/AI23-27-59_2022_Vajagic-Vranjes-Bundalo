@@ -1,0 +1,1029 @@
+/* ====== PRVI (GLAVNI) CSS – ostavljen netaknut ====== */
+body {
+    background-color: rgba(7, 12, 17, 1);
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    /* scroll-snap-type: y mandatory; */
+    scroll-behavior: smooth;
+}
+
+/* Prozori setup */
+.prozor-light {
+    font-size: clamp(16px, 1vw, 1.2vw);
+    font-weight: 600;
+    color: rgb(11, 19, 27);
+    background-color: rgb(255, 255, 255);
+}
+
+.prozor-dark {
+    font-size: clamp(16px, 1vw, 1.2vw);
+    font-weight: 600;
+    color: white;
+    background-color: rgb(11, 19, 27);
+}
+
+.prozor-dark .custom-list {
+    list-style-type: none;
+    padding-left: 1.25rem; 
+}
+
+.prozor-dark .custom-list li {
+    margin-bottom: 5px; 
+}
+
+.custom-list .inner-list {
+    list-style-type: disc;
+    margin-top: 5px;
+}
+
+.custom-list .inner-list li {
+    margin-bottom: 5px;
+}
+
+.custom-list li a {
+    color: white; 
+    text-decoration: none;
+    transition: .5s  
+}
+
+.custom-list li a:hover {
+    color: #F22F47;
+    transition: .2s 
+}
+
+.prozor-kolor {
+    font-size: clamp(16px, 1vw, 1.2vw);
+    font-weight: 600;
+    color: #0b121c;
+    background-image: linear-gradient(270deg, #FF3F4E, #CC0033);
+}
+
+section {
+    scroll-snap-align: start;
+} */
+
+/* Tipografija */
+h1 {
+    font-family: Montserrat;
+}
+
+h2 {
+    font-family: Montserrat;
+}
+
+p {
+    font-family: Montserrat;
+}
+
+.prozor-naslov {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Navigacija */
+
+.currentPage a {
+  color: white; /* tvoja narandžasta */
+  font-weight: 500;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8); /* da se vidi i na svetloj pozadini */
+}
+.navigacija {
+    z-index: 10;                              /* postavlja navigaciju iznad drugih elemenata */
+    height: 15vh;                           /* visina navigacije - gde stoji u odnosu na ekran */
+    background-color: rgba(7, 12, 17, 0);     /* transparentna pozadina */
+    align-items: center;                      /* poravnava sve elemente po sredini navigacije  */
+    transition: .2s;                          /* omogućava glatku promenu boje kad se klasa promeni (efekat fade-in/out pri skrolovanju) */
+} 
+
+.navPozadina {                                 /* menja boju u crnu kada skrolujemo, ovo radi java script */
+    background-color: rgba(7, 12, 17, 1);
+    transition: .2s;
+}
+
+.navLogoContainer {                            /* koliku povrsinu zauzima logo i koliko je odmaknut od leve ivice */
+    height: 50%;
+    margin-left: 2.5%;
+}
+
+.logoPolovina {
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-image: url("logos/energy-removebg-preview.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.naslovPolovina {
+    height: 100%;
+    margin-left: 1vw;
+    align-items: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+@media (max-width: 1000px) { 
+    .naslovPolovina div {
+        display: none;
+    }}
+
+.navPagesContainer {
+    width: 40%;
+    height: 100%;
+    margin-right: 5%;
+    align-items: center;
+}
+
+.navButtonContainer {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.8vw, 1vw, 1.2vw);
+}
+
+.navButtonContainer .nav-link {
+    color: rgb(255, 255, 255);
+    transition: .5s;
+}
+
+.navButtonContainer:hover .nav-item > a {                  /* boja kad predjemo preko linka u nav baru */
+    color: rgb(226, 97, 40 );
+    transition: .2s;
+}
+
+.navButtonContainer li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navButtonContainer .dropdown-menu {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.95); /* bela pozadina sa blagom prozirnošću */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    transition: 0.15s;
+}
+
+.navButtonContainer .dropdown-item {
+    color: rgba(60, 60, 60, 0.8); /* sivkasta slova */
+    transition: 0.3s;
+}
+
+.navButtonContainer .dropdown-item:hover {
+    color: rgb(0, 0, 0); /* crna slova na hover */
+    background-color: rgba(0, 0, 0, 0.05); /* blago siva pozadina na hover */
+    transition: 0.2s;
+}
+
+#progBar {
+    height: 6px;
+    transform: translate(-12px, -3px);
+    margin-top: 12.9vh;
+    box-shadow: 5px 0px 15px 0px #ff3f4e;
+    width: var(--progress);
+}
+
+/* Skaliranje */
+@media (max-width: 1000px) {
+    .navLogoContainer {
+        height: 30%;
+    }
+    .navPagesContainer {
+        width: 70%;
+    }
+    .navButtonContainer {
+        font-size: clamp(1.2vw, 1.8vw, 5vw);
+    }
+}
+
+@media (max-width: 500px) {
+    .navLogoContainer {
+        height: 25%;
+    }
+    .navPagesContainer {
+        width: 80%;
+        margin-right: 0%;
+    }
+    .navButtonContainer {
+        font-size: clamp(1.2vw, 2.2vw, 5vw);
+    }
+}
+
+@media (max-width: 400px) {
+    .navLogoContainer {
+        height: 20%;
+    }
+    .navPagesContainer {
+        width: 90%;
+    }
+    .navButtonContainer {
+        font-size: clamp(1.2vw, 2.2vw, 5vw);
+    }
+}
+
+/* Pocetna strana */
+#pocetnaSection01 {          /* ceo landing page */
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url("logos/imageggg.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.pocetnaSection01-container {       /* tekst landing pagea */
+    width: 100%;
+    height: 85vh;
+    margin-top: 15vh;
+}
+
+.pocetnaContent-container {
+    width: 60%;
+    height: 100%;
+}
+
+.pocetnaContent-container h1 {
+    font-family: Montserrat;
+    font-weight: 800;
+    letter-spacing: .03em;
+    text-shadow: 0 6px 20px rgba(0,0,0,.35);
+}
+
+.pocetnaContent-container h2{
+    font-family: Montserrat;
+    font-weight: 600;
+    opacity: .95;
+}
+
+.pocetnaContent-container p {
+    color: #FFFFF0;
+    font-family: Montserrat;
+    font-size: 20px;
+    opacity: .95;
+    letter-spacing: .03em;
+}
+
+.pocetnaContent-container h1,
+.pocetnaContent-container h2,
+.pocetnaContent-container p {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+..treniraj-dugme{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .06em;
+  border-radius: 999px;
+  padding: .9rem 1.8rem;
+  color:#0B1217; background:#fff; border:2px solid #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,.22);
+  transition: transform .2s ease, box-shadow .2s ease, background .25s, color .25s, border-color .25s;
+}
+.treniraj-dugme:hover{
+  background:#0B1217; color:#fff; border-color:#0B1217;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.3);
+}
+
+@media (max-width: 1200px) {
+    .pocetnaContent-container {
+        width: 70%;
+    }
+    .pocetnaContent-container p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .pocetnaContent-container {
+        width: 100%;        
+    }
+    .pocetnaContent-container p {
+        font-size: 16px;
+    }
+}
+
+/* sadrzaj */
+.section02 {
+  background-color: #A3A284;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  padding: 100px 32px;
+}
+
+
+
+.kartice {
+  display: flex;               /* Raspored kartica */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.kartica {
+  background-color: #FFFFF0;       /* Izgled pojedinačne kartice */
+  border-radius: 10px;
+  padding: 40px;
+  width: 450px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kartica-slika {
+  width: 100%;
+  height: 180px;                  
+  object-fit: cover;              
+  border-radius: 10px 10px 10px 10px;   
+  margin-bottom: 20px;            
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.kartica-slika {
+  filter: brightness(0.9) contrast(1.1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.kartica:hover .kartica-slika {
+  transform: scale(1.03);
+  filter: brightness(1);
+}
+
+/* Hover efekat */
+.kartica:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.kartica h3 {
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.kartica p {
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+.dugme {
+  display: inline-block;
+  text-decoration: none;
+  color: #E26128; /* crvenkasto-narandžasta */
+  border: 2px solid #E26128;
+  border-radius: 10px;
+  padding: 10px 25px;
+  transition: 0.3s;
+}
+
+.dugme:hover {
+  background-color: #E26128;
+  color: #0B1217;
+}
+
+.section03 {
+  background-color: #B7B697; 
+}
+
+.section03 h2 {
+  color: #0B1217;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.section03 p {
+  color: #1c1c1c;
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.section03 .btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #E26128; /* crvenkasto-narandžasta */
+  border: 2px solid #E26128;
+  border-radius: 10px;
+  padding: 10px 25px;
+  transition: 0.3s;
+}
+
+.section03 .btn:hover {
+  background-color: #E26128;
+  color: #0B1217;
+}
+
+/* OVO JE ZA KONTAKT STRANICU */
+.gornji-razmak {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.kontakt-tekst{
+  background-color: #C0BE9F;
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
+  text-align: center;
+  flex-direction: column;
+  min-height: 65vh;
+}
+
+.kontakt-tekst h2{
+ font-family: "Montserrat";
+ font-size: 2.5rem;
+ color: #E26128;
+}
+
+.kontakt-tekst p{
+ font-family: "Montserrat";
+ font-size: 1.2rem;
+}
+
+.kontakt{
+ background-color: #C0BE9F;
+ min-height: 65vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ height: 100%;
+ padding: 30px;
+
+}
+
+/* Footer */
+#footer {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+#footer {
+    color: white;
+    font-size: clamp(14px, 0.8vw, 1vw);
+    font-weight: 500;
+}
+
+#footer a {
+    color: white;
+    font-size: clamp(14px, 0.8vw, 1vw);
+}
+
+#footer a:hover {
+    color: #E26128; /
+    transition: 0.3s ease; 
+}
+
+/* ====== DODATO IZ DRUGOG CSS-a: samo ono što ne postoji u prvom ====== */
+
+/* Ispravna baza klase (u prvom je slučajno bilo sa dve tačke) */
+.treniraj-dugme {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .06em;
+  border-radius: 999px;
+  padding: .9rem 1.8rem;
+  color:#0B1217; background:#fff; border:2px solid #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,.22);
+  transition: transform .2s ease, box-shadow .2s ease, background .25s, color .25s, border-color .25s;
+}
+
+/* Galerija */
+.galerija-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #A3A284;
+  padding: 20vh 5% 5% 5%;
+}
+
+.galerija-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+/* Kartica (zajedničko za oba tipa) */
+.galerija-item,
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* Samo .galerija-item je kvadrat (1:1) */
+.galerija-item { aspect-ratio: 1 / 1; }
+
+/* ZAJEDNIČKI stil za <img> u obe varijante */
+.galerija-item img,
+.gallery-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .25s ease, filter .25s ease;
+  border-radius: 12px;
+}
+
+/* Razlika u odnosu stranica za .gallery-thumb (ostaje 4:3) */
+.gallery-thumb { aspect-ratio: 4 / 3; }
+
+/* Hover efekti */
+.galerija-item:hover img,
+.gallery-card:hover .gallery-thumb {
+  transform: scale(1.04);
+  filter: brightness(0.8) saturate(1.05);
+}
+
+/* Overlay – .galerija-item */
+.galerija-item .overlay {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity .25s ease;
+  pointer-events: none;
+}
+.galerija-item:hover .overlay { opacity: 1; }
+
+.galerija-item .overlay p {
+  font-family: Montserrat, sans-serif;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+/* Overlay – .gallery-card */
+.gallery-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .35);
+  opacity: 0;
+  border-radius: 12px;
+  transition: opacity .25s ease;
+  z-index: 1;
+}
+
+/* Tekst preko .gallery-card */
+.overlay-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .8);
+  opacity: 0;
+  transition: opacity .25s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.gallery-card:hover::after,
+.gallery-card:hover .overlay-text { opacity: 1; }
+
+/* Responsivnost grida */
+@media (max-width: 1200px) {
+  .galerija-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .galerija-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .galerija-grid { grid-template-columns: 1fr; }
+}
+
+/* Offset ispod fiksnog navbar-a */
+.pt-nav { 
+  padding-top: 15vh; 
+  padding-bottom: 5vh;
+  background-color: #A3A284;
+}
+
+/* Leva hero slika */
+.hero-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+/* Raspored: dve kolone, poravnanje gore */
+.kontakt-layout{
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: start; /* ⬅️ ovo poravnava vrhove levo i desno */
+  max-width: 1400px;
+  margin: 0 auto;           /* poravnaj vrhove */
+}
+
+/* Leva kolona */
+.lokacije-list .kartica {
+  background: #EAE8D4;
+  border-radius: 16px;
+  padding: 30px 40px;       /* više unutrašnjeg prostora */
+  box-shadow: 0 6px 20px rgba(0,0,0,.12);
+  display: grid;
+  grid-template-columns: 220px 1fr;  /* šira slika + više prostora za tekst */
+  gap: 32px;                /* veći razmak između slike i teksta */
+  align-items: center;
+  margin-bottom: 28px;
+  width: 100%;              /* koristi punu širinu kontejnera */
+}
+
+.lokacije-list .kartica img{
+  width: 160px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.lokacije-list .kartica h3{
+  margin: 0 0 8px 0;
+  line-height: 1.15;
+}
+
+.lokacije-list .kartica p{
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Desna kolona (forma) */
+.kontakt-form{
+  background: #EAE8D4;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.12);
+}
+
+/* Kontrole forme – malo ujednačiti izgled */
+.kontakt-form .form-control{
+  border-radius: 10px;
+}
+
+/* Prelamanje dugih reči/imejlova da ne "iskaču" */
+.break-words{
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Mobilno: sve ispod jednog drugog i slika full width */
+@media (max-width: 992px){
+  .kontakt-layout{
+    grid-template-columns: 1fr;
+  }
+  .lokacije-list .kartica{
+    grid-template-columns: 1fr;       /* slika iznad teksta */
+    text-align: left;
+  }
+  .lokacije-list .kartica img{
+    width: 100%;
+    height: 220px;
+  }
+}
+
+
+/* ======== CENOVNIK STRANICA ======== */
+
+
+/* ======== UVODNI TEKST CENOVNIKA ======== */
+#cenovnik .cenovnik-uvod {
+    font-size: 20px; /* povećava slova, možeš staviti i 1.2rem ili 18px */
+    color: #333333; ; /* svetla boja koja se dobro vidi na tamnoj pozadini */
+    line-height: 1.2; /* razmak između redova da bude lakše čitljivo */
+    margin-bottom: 10px; /* razmak između pasusa */
+    text-align: justify;
+}
+
+#cenovnik .istaknuto {
+    color: #ffc107; /* zlatno-žuta boja kao kod naslova kartica */
+    font-weight: 700;
+}
+
+#cenovnik {
+  padding-top: 120px; /* pomera sve dole ispod navigacije */
+  background-color: #C0BE9F; /* svetla pozadina kao na drugim stranicama */
+  text-align: center; /* centrira naslov i kartice */
+}
+
+#cenovnik h2 {
+    margin-bottom: 60px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    /* ovo pomera naslov dole ispod navigacije */
+    padding-top: 80px; /* možeš prilagoditi */
+}
+
+/* ======== KARTICE ======== */
+#cenovnik .kartica {
+  background: linear-gradient(135deg, #1b1b1b, #2a2a2a); /* lagani gradient */
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  padding: 25px;
+  height: 100%;
+}
+
+/* Hover efekat sa svetlucanjem */
+#cenovnik .kartica:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(255,255,255,0.2), 0 6px 16px rgba(0,0,0,0.5);
+  background: linear-gradient(135deg, #1b1b1b, #3c3c3c);
+}
+
+/* ======== TEKST UNUTAR KARTICE ======== */
+#cenovnik .kartica h3 {
+  color: #ffc107;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#cenovnik .kartica p {
+  color: #ddd;
+}
+
+#cenovnik .kartica h4 {
+  color: #fff;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+/* ======== RAZMAK IZMEĐU REDOVA ======== */
+#cenovnik .col-md-4,
+#cenovnik .col-md-6 {
+  margin-bottom: 40px;
+}
+
+/* ======== CENTRIRANJE DONJE KARTICE ======== */
+#cenovnik .row.justify-content-center {
+  display: flex;
+  justify-content: center;
+}
+
+/* ======== ISTAKNUTA (ALL-IN) KARTICA ======== */
+#cenovnik .kartica.istaknuta {
+  transform: scale(1.05);
+  border: 2px solid #ffc107;
+  z-index: 2;
+}
+
+/* ======== RESPONSIVE DORADA ======== */
+@media (max-width: 768px) {
+  #cenovnik {
+    padding-top: 100px;
+  }
+
+  #cenovnik .kartica {
+    margin-bottom: 30px;
+  }
+
+  #cenovnik h2 {
+    margin-bottom: 40px;
+  }
+}
+
+/* ======== PLAN TRENINGA STRANICA ======== */
+#plan-treninga {
+  padding-top: 120px; /* da tekst ne bude zalepljen za navigaciju */
+  background-color: #C0BE9F; /* svetla pozadina kao na drugim stranicama */
+}
+
+#plan-treninga h2 {
+  margin-bottom: 60px; /* razmak između naslova i kartica */
+  font-weight: 700;
+  color: rgba(0, 0, 0, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#plan-treninga .kartica {
+  background-color: #1b1b1b;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#plan-treninga .kartica:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+}
+
+#plan-treninga .kartica h3 {
+  color: #ffc107; /* zlatno-žuta nijansa */
+  font-weight: 600;
+}
+
+#plan-treninga .kartica p {
+  color: #ddd;
+  text-align: justify; /* poravnanje pasusa */
+}
+
+#plan-treninga .kartica h4 {
+  color: #fff;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+#plan-treninga .col-md-4,
+#plan-treninga .col-md-6 {
+  margin-bottom: 40px; /* razmak između redova */
+}
+
+/* Istaknuti plan */
+#plan-treninga .istaknuta {
+  border: 2px solid #ffc107;
+}
+
+/* ======== PLAN TRENINGA STRANICA ======== */
+
+#plan-treninga .plan-uvod {
+    font-size: 20px;
+    color: #333333;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+#plan-treninga .istaknuta {
+    color: #ffc107;
+    font-weight: 700;
+}
+
+#plan-treninga {
+  padding-top: 120px;
+  background-color: #C0BE9F;
+  text-align: center;
+}
+
+#plan-treninga h2 {
+    margin-bottom: 60px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-top: 80px;
+}
+
+/* ======== KARTICE ======== */
+#plan-treninga .kartica {
+  background: linear-gradient(135deg, #1b1b1b, #2a2a2a);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  padding: 25px;
+  height: 100%;
+}
+
+#plan-treninga .kartica:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(255,255,255,0.2), 0 6px 16px rgba(0,0,0,0.5);
+  background: linear-gradient(135deg, #1b1b1b, #3c3c3c);
+}
+
+#plan-treninga .kartica h3 {
+  color: #ffc107;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#plan-treninga .kartica p {
+  color: #ddd;
+  text-align: center; /* promenjeno sa justify na center */
+}
+
+#plan-treninga .kartica h4 {
+  color: #fff;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+#plan-treninga .col-md-4,
+#plan-treninga .col-md-6 {
+  margin-bottom: 40px;
+}
+
+#plan-treninga .row.justify-content-center {
+  display: flex;
+  justify-content: center;
+}
+
+#plan-treninga .kartica.istaknuta {
+  transform: scale(1.05);
+  border: 2px solid #ffc107;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  #plan-treninga {
+    padding-top: 100px;
+  }
+
+  #plan-treninga .kartica {
+    margin-bottom: 30px;
+  }
+
+  #plan-treninga h2 {
+    margin-bottom: 40px;
+  }
+}
+
+#plan-treninga .faq-container p {
+  color: #ddd;
+  margin: 5px 0 15px 0;
+}
+
+#plan-treninga .faq-container strong {
+  color: #ffc107;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#plan-treninga .faq-container .faq-item {
+  background: #2a2a2a;
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+  #plan-treninga .faq-container {
+    padding: 0 15px;
+  }
+}
+
+#plan-treninga .faq-container h3 {
+    color: #333;
+    text-align: center;
+    font-weight: 700; /* bold */
+}
+
+/* ======== REZENZIJE STRANICA ======== */
+#recenzije h2 {
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-top: 80px; /* pomera naslov dole ispod navigacije */
+    margin-bottom: 60px; /* razmak između naslova i kartica */
+}
+
+#recenzije .recenzija-kartica {
+    background: linear-gradient(135deg, #1b1b1b, #2a2a2a);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, opacity 0.5s ease;
+    padding: 25px;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#recenzije .recenzija-kartica h3 {
+    color: #ffc107;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#recenzije .recenzija-kartica p {
+    color: #ddd;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#recenzije .zvezdice {
+    color: #ffc107;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Animacija pojavljivanja kartica na scroll */
+#recenzije .recenzija-kartica.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width:768px) {
+    #recenzije .recenzija-kartica {
+        margin-bottom: 30px;
+    }
+}
